@@ -17,10 +17,10 @@ int i, j;
 void printList(int *p, int n){
     for(int i=0;i<n;i++)
      {
-         //a[i]=rand()%10;
-         //cin>>a[i];
+
          cout<<p[i]<<"\n";
      }
+
 
 }
 
@@ -28,19 +28,25 @@ void printList(int *p, int n){
 
 int main(){
 
-    int n=100000;
-
+  //int z=100;
+  srand(time(0));
+  int close=100000;
+for(int r=10;r<close;r+=10){
+    int n=r;
 
  int *A = new int[n];
-// generate random int
-
-printList(A,n);
+for(int i=0;i<n;i++)
+     {
+         A[i]=rand();
+     }
+//printList(A,n);
 
 auto start1 = chrono::high_resolution_clock::now();
     ios_base::sync_with_stdio(false);
 
     /*  ..........Change your algorithm...............*/
     int *m = bubbleSort(A,n);
+    //printList(A,n);
     /* .......................................  */
 
 
@@ -53,5 +59,6 @@ auto start1 = chrono::high_resolution_clock::now();
     cout << " sec" << endl;
 
 
-return 0;
+//return 0;
+}
 }
