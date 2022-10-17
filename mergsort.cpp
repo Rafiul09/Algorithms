@@ -36,9 +36,16 @@ int main()
 	int arr2[] = {2, 4, 6, 8};
 	int n2 = sizeof(arr2) / sizeof(arr2[0]);
 
-	int* arr4=mergeArrays(arr1, arr2, 4, 4);
+	int* arr4=mergeArrays(arr1, arr2, n1, n2);
 
-	cout << "Array after merging" <<endl;
+	cout << "Array 1:" <<endl;
+	for (int i=0; i < n1; i++)
+		cout << arr1[i] << " ";
+		cout << "\nArray 2:" <<endl;
+	for (int i=0; i < n2; i++)
+		cout << arr2[i] << " ";
+
+	cout << "\nArray after merging" <<endl;
 	for (int i=0; i < n1+n2; i++)
 		cout << arr4[i] << " ";
 
