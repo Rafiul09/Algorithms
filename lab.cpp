@@ -41,8 +41,8 @@ int Lsearch(int *arr, int N, int x)
 
 int main(void)
 {
-    int n = 100000;
-	int arr[n];
+    int n = 1000000;
+	int *arr=new int [n];
 
     freopen("in.txt", "r", stdin);
      for(int i=0;i<n;i++)
