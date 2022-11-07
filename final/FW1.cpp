@@ -142,7 +142,7 @@ vector<student>ST;
    for(int i=0;i<3;i++)
    {
        cin>>iD>>naME>>cgPA;
-       student s1 (ID,namE,cgPA);
+       student s1 (iD,namE,cgPA);
        q.push(s1);
 
 
