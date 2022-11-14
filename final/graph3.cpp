@@ -13,6 +13,32 @@
         cout << "\n";
     }
  }
+
+void countdegree(vector<int>rslt[],int node)
+ {
+     int *d=new int [node];
+     for(int i=0;i<node;i++)
+     {
+         d[i]=0;
+     }
+
+
+     for(int i = 0; i < node; i++)
+        {
+
+                d[i]=rslt[i].size();
+
+        }
+
+    for(int i=0;i<node;i++)
+     {
+         cout<<i<<" Degree "<<d[i]<<endl;
+     }
+
+
+
+ }
+
  int main()
  {
      int node, edge,u,v;
@@ -30,5 +56,6 @@
      }
 
      printGraph(arr,node);
+     countdegree(arr,node);
  }
 
